@@ -128,9 +128,15 @@ body, html{
 
 
 .main-content{
+    display:grid;
+    grid-template-columns: 2.5fr 1fr;
+    grid-template-rows: 41px 5fr;
     background-color:rgb(182, 167, 171);
     grid-area: 2 / 2 / 3 / 3;
     box-shadow: inset 0px 8px 4px -4px rgb(175, 148, 155);
+    padding-top: 50px;
+    padding-bottom: 80px;
+    column-gap: 30px;
 }
 
 .top-header form button{
@@ -233,4 +239,107 @@ body, html{
     font-weight: bold;
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.top-main-content{
+    grid-area: 1 / 1 / 2/ 3;
+    justify-self: stretch;
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    justify-items: left;
+    padding-left: 40px;
+
+}
+
+.top-main-content p{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    height: 1.5em;
+}
+
+.projects{
+    padding-left: 40px;
+    grid-area: 2 / 1 / 3 / 2;
+    gap: 30px; 
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.project-item{
+    background-color: white;
+    box-shadow: 3px 3px 4px 0px rgb(170, 126, 138);
+    border-radius: 5px;
+    overflow: hidden
+
+}
+
+.announcements-trending{
+    grid-area: 2 / 2 / 3 / 3;
+    display:grid;
+    grid-row: 1fr 1fr;
+    padding-right: 40px;
+    row-gap: 30px;
+}
+
+.announcements{
+    background-color: white;
+    box-shadow: 3px 3px 4px 0px rgb(170, 126, 138);
+    border-radius: 5px;
+}
+
+.trending-content{
+    height: calc(100% - 41px);
+    background-color: white;
+    box-shadow: 3px 3px 4px 0px rgb(170, 126, 138);
+    border-radius: 5px;
+}
+
+.trending p{
+    font-size: 1.5em;
+    height: 36px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.project-item-inside{
+    height: 100%;
+    border-radius: 0px;
+    box-shadow: inset 6px 0px 0px 0px rgb(10, 87, 16);
+    display:grid;
+    grid-template-rows: 2fr 1fr;
+}
+
+.project-text{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    grid-row: 1 / 2;
+}
+
+.project-text p{
+    margin-bottom: 0px;
+}
+
+.project-text p:first-child{
+    margin-bottom: 0px;
+    font-size: 1.2em;
+    font-weight: bold;
+    height: 1.2em;
+}
+
+.widgets{
+    margin-top: 40px;
+    height: 2.3rem;
+    padding-right:20px;
+    /* width: 1.8rem; */
+    grid-row: 2 / 3;
+    justify-self: right;
+}
+
+.widgets svg{
+    width: 1.8rem;
+    margin: 8px;
+    margin-top:0px;
 }
